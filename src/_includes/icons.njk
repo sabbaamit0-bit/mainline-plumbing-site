@@ -1,0 +1,15 @@
+{# Service icons, selected by name in the CMS #}
+{% macro svc(name) %}
+{% if name == "leak" %}<svg class="svc__ico" viewBox="0 0 32 32" fill="none"><path d="M16 4c4 6 7 9.5 7 13a7 7 0 11-14 0c0-3.5 3-7 7-13z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+{% elif name == "heater" %}<svg class="svc__ico" viewBox="0 0 32 32" fill="none"><rect x="8" y="4" width="16" height="24" rx="4" stroke="currentColor" stroke-width="2"/><path d="M12 11h8M16 20a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" stroke="currentColor" stroke-width="2"/></svg>
+{% elif name == "drain" %}<svg class="svc__ico" viewBox="0 0 32 32" fill="none"><path d="M6 10h20M9 10v6a7 7 0 0014 0v-6M16 23v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+{% elif name == "repipe" %}<svg class="svc__ico" viewBox="0 0 32 32" fill="none"><path d="M4 20h24M8 20V8m16 12V8M8 8h16M12 14h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+{% elif name == "faucet" %}<svg class="svc__ico" viewBox="0 0 32 32" fill="none"><path d="M16 6v9m0 0l-4 4m4-4l4 4M9 27h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="6" r="3" stroke="currentColor" stroke-width="2"/></svg>
+{% elif name == "remodel" %}<svg class="svc__ico" viewBox="0 0 32 32" fill="none"><path d="M5 27V13l11-7 11 7v14M12 27v-7h8v7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+{% else %}<svg class="svc__ico" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/></svg>{% endif %}
+{% endmacro %}
+
+{# Five gold stars #}
+{% macro stars(size) %}
+<div class="stars" aria-label="5 stars">{% for i in range(0,5) %}<svg width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .7-5.2 4.7 1.5 6.9L12 17.8 5.2 20.8l1.5-6.9L1.5 9.2l7-.7L12 2z"/></svg>{% endfor %}</div>
+{% endmacro %}

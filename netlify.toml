@@ -1,0 +1,7 @@
+# Netlify build settings — Netlify runs this in the cloud on every save
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"

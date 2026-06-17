@@ -1,0 +1,269 @@
+{
+  "company": {
+    "name": "Mainline Plumbing Co.",
+    "tagline": "Rockville, MD · Licensed & Insured",
+    "phone_display": "(301) XXX-XXXX",
+    "phone_link": "+1301XXXXXXX",
+    "email": "hello@mainlineplumbing.example",
+    "license": "MD Master Plumber Lic. #71234",
+    "hours_weekday": "Mon–Fri 7:30a–5:30p",
+    "hours_weekend": "Sat 8a–2p · Closed Sun",
+    "footer_blurb": "Family-run plumbing serving Rockville and Montgomery County since 2008. We answer the phone, show up on time, and price it before we start.",
+    "sheets_url": "https://script.google.com/macros/s/AKfycbw5HiBmAPoZy0uxgQJQ6eCUABl3R8xvAXjyMSpTE-gbhd684B8NE1IWV0pd8qZGaNFm/exec"
+  },
+
+  "hero": {
+    "eyebrow": "Serving Rockville & Montgomery County",
+    "heading_before": "Plumbing done",
+    "heading_emphasis": "right",
+    "heading_after": "the first time.",
+    "lede": "Leaky water heater? Slow drain? A faucet that's been on your list for months? Licensed Mainline plumbers do clean, code-correct work across Rockville — and tell you the price before we start.",
+    "image": "/images/hero.jpg",
+    "image_alt": "Mainline plumber repairing a copper supply line under a sink",
+    "gauge_top": "Typical schedule",
+    "gauge_read": "next",
+    "gauge_unit": "day",
+    "gauge_sub": "most jobs booked",
+    "trust_points": [
+      "MD Master Plumber · Lic. #71234",
+      "Upfront, flat-rate pricing",
+      "1-year workmanship warranty"
+    ]
+  },
+
+  "services_section": {
+    "eyebrow": "What we fix",
+    "heading": "From a dripping faucet to a whole-house repipe."
+  },
+
+  "services": [
+    {
+      "slug": "leaks-and-pipes",
+      "icon": "leak",
+      "title": "Leaks & pipe repair",
+      "card_blurb": "Slab leaks, pinhole copper, failing supply lines. We find it, stop it, and dry you out.",
+      "page_lede": "A small drip can rot a subfloor or spike a water bill long before you see a puddle. We track leaks down to the source — slab, wall, supply line or fitting — fix them right, and show you the price before any work starts.",
+      "image": "/images/service-leaks.jpg",
+      "image_alt": "Plumber repairing a leaking pipe under a sink",
+      "section_heading": "Find it, stop it, dry it out.",
+      "features": [
+        { "title": "Leak detection", "body": "Acoustic and moisture-meter location so we open the wall in one spot, not five." },
+        { "title": "Slab & pinhole leaks", "body": "Pinholes in old copper and under-slab lines repaired or rerouted to last." },
+        { "title": "Supply line failures", "body": "Burst or split lines, frozen-pipe damage, and corroded fittings swapped clean." },
+        { "title": "Upfront pricing", "body": "Flat quote in writing before we cut, solder, or open anything up." }
+      ],
+      "signs_heading": "Signs you've got a leak.",
+      "signs": [
+        { "title": "Water bill jumped", "body": "A spike with no change in use almost always means a hidden leak." },
+        { "title": "Warm spot on the floor", "body": "A warm patch on a slab can mean a hot-water line leaking underneath." },
+        { "title": "Stains or musty smell", "body": "Ceiling rings, bubbling paint, or a damp, musty closet or cabinet." }
+      ],
+      "cta_heading": "Think you have a leak?",
+      "cta_body": "Send a few details and a licensed Mainline plumber will get back to you the same business day with next steps and a price range."
+    },
+    {
+      "slug": "water-heaters",
+      "icon": "heater",
+      "title": "Water heaters",
+      "card_blurb": "Tank swaps and tankless installs, repairs and flushes. No hot water? We'll sort it.",
+      "page_lede": "No hot water, rusty water, or a tank that's puddling on the floor? We repair what's worth repairing and replace what isn't — gas, electric, or tankless — and size it right for your house so you're not paying to heat water you don't use.",
+      "image": "/images/service-water-heaters.jpg",
+      "image_alt": "Newly installed water heater with clean connections",
+      "section_heading": "Hot water, sorted.",
+      "features": [
+        { "title": "Tank replacement", "body": "40–75 gal gas and electric swaps, hauled-away old unit, code-correct venting." },
+        { "title": "Tankless installs", "body": "Endless hot water and a smaller footprint — sized, vented, and permitted right." },
+        { "title": "Repairs & flushes", "body": "Thermocouples, elements, valves and anode rods — plus flushes to fight sediment." },
+        { "title": "Repair-or-replace advice", "body": "An honest read on whether a fix is worth it — no pressure to replace a good tank." }
+      ],
+      "signs_heading": "Signs your heater's on the way out.",
+      "signs": [
+        { "title": "Lukewarm or no hot water", "body": "Often a heating element, thermocouple, or sediment buildup." },
+        { "title": "Rusty or smelly water", "body": "Rust-colored hot water usually means the tank is corroding inside." },
+        { "title": "Water around the base", "body": "A leaking tank doesn't get better — plan a replacement before it fails." }
+      ],
+      "cta_heading": "Lost your hot water?",
+      "cta_body": "Tell us the heater's age, fuel type and what it's doing, and we'll come out with the right parts — and a flat price — the same business day."
+    },
+    {
+      "slug": "drains-and-sewer",
+      "icon": "drain",
+      "title": "Drains & sewer",
+      "card_blurb": "Clogs, backups, camera inspection and trenchless sewer repair — without tearing up the yard.",
+      "page_lede": "A slow drain is annoying. A backed-up sewer line is an emergency you can see and smell. We clear the clog, then put a camera down the line so you know whether it was grease, roots, or a broken pipe — and fix the cause, not just the symptom.",
+      "image": "/images/service-drains.jpg",
+      "image_alt": "Plumber clearing a drain line",
+      "section_heading": "Cleared right, not just poked.",
+      "features": [
+        { "title": "Drain cleaning", "body": "Kitchen, bath, laundry and main-line clogs cleared with the right tool for the line." },
+        { "title": "Camera inspection", "body": "We send a camera down the line and show you the real problem on screen." },
+        { "title": "Trenchless sewer repair", "body": "Spot repairs and pipe lining that fix the line without trenching your whole yard." },
+        { "title": "Root & grease removal", "body": "Mechanical cutting and hydro-jetting to clear roots and built-up grease for good." }
+      ],
+      "signs_heading": "Signs it's more than a clog.",
+      "signs": [
+        { "title": "Multiple slow drains", "body": "When several fixtures back up at once, the main line is usually the culprit." },
+        { "title": "Gurgling toilet", "body": "Bubbling or a toilet that drops when you run the sink points to a venting or main-line issue." },
+        { "title": "Smell or yard sogginess", "body": "A sewage smell or a wet patch in the yard can mean a cracked sewer line." }
+      ],
+      "cta_heading": "Drain backing up?",
+      "cta_body": "Tell us which fixtures are affected and we'll bring the right gear to clear it — and a camera to find out why it happened."
+    },
+    {
+      "slug": "repipes",
+      "icon": "repipe",
+      "title": "Repipes",
+      "card_blurb": "Trading out old galvanized or failing poly for clean PEX or copper — quoted to the dollar.",
+      "page_lede": "Brown water, weak pressure, and leaks that keep coming back are signs the pipes themselves are failing. We replace old galvanized and problem-era poly with clean PEX or copper — pull the WSSC permit, do it in stages so you keep water, and patch the drywall so you'd never know we were there.",
+      "image": "/images/service-repipes.jpg",
+      "image_alt": "Freshly soldered copper pipework after a repipe",
+      "section_heading": "New pipes, quoted to the dollar.",
+      "features": [
+        { "title": "PEX or copper", "body": "We walk you through the trade-offs and price both, so you choose with the numbers in front of you." },
+        { "title": "Permits & inspection", "body": "WSSC permit pulled and the work inspected — done by the book, on record." },
+        { "title": "Staged so you keep water", "body": "We plan the cut-overs so your home isn't without water overnight." },
+        { "title": "Drywall patched", "body": "Access holes closed and patched clean, ready for paint — not left for you to deal with." }
+      ],
+      "signs_heading": "Signs it's time to repipe.",
+      "signs": [
+        { "title": "Discolored water", "body": "Brown or yellow water at the tap is a classic sign of corroding galvanized pipe." },
+        { "title": "Pressure keeps dropping", "body": "Galvanized scales up inside over decades and slowly chokes off flow." },
+        { "title": "Repeat leaks", "body": "Once one section fails, the rest of the same-age pipe is usually close behind." }
+      ],
+      "cta_heading": "Tired of patching old pipe?",
+      "cta_body": "Tell us your home's age and what you're seeing at the tap. We'll come measure, talk options, and put a fixed repipe price in writing."
+    },
+    {
+      "slug": "fixtures-and-faucets",
+      "icon": "faucet",
+      "title": "Fixtures & faucets",
+      "card_blurb": "Toilets, sinks, disposals, hose bibs — and the new faucet that's been in the box for months.",
+      "page_lede": "The new faucet that's still in the box. A toilet that runs all night. A disposal that finally gave up. These are the jobs that never quite make it to the top of the list — so let us knock them out in one clean visit, sealed right and tested before we leave.",
+      "image": "/images/service-fixtures.jpg",
+      "image_alt": "Freshly installed modern kitchen faucet",
+      "section_heading": "The small jobs, done properly.",
+      "features": [
+        { "title": "Faucets & sinks", "body": "Kitchen and bath faucets, sinks and supply valves swapped and sealed leak-free." },
+        { "title": "Toilets", "body": "New toilets set on fresh wax, plus repairs for runners, rockers and weak flushes." },
+        { "title": "Garbage disposals", "body": "Jammed, leaking, or humming-but-dead disposals repaired or replaced same visit." },
+        { "title": "Hose bibs & valves", "body": "Outdoor spigots, shutoff valves and ice-maker lines — frost-proof and tidy." }
+      ],
+      "signs_heading": "Bought the part already?",
+      "signs": [
+        { "title": "We'll install your fixture", "body": "Already have the faucet or toilet you want? We'll install what you bought." },
+        { "title": "Or we'll supply it", "body": "Not sure what to get? We'll bring quality fixtures that fit your space and budget." },
+        { "title": "Old parts hauled away", "body": "We take the old fixture and packaging with us — nothing left in your driveway." }
+      ],
+      "cta_heading": "Got a list of small jobs?",
+      "cta_body": "List what you need swapped or fixed and we'll quote it together — often knocked out in a single visit."
+    },
+    {
+      "slug": "remodel-rough-in",
+      "icon": "remodel",
+      "title": "Remodel rough-in",
+      "card_blurb": "Kitchen and bath remodels, additions, ADUs — WSSC-code rough-in your inspector will pass.",
+      "page_lede": "Whether it's a single bath refresh or a full addition, the plumbing behind the wall decides whether the finish goes smoothly. We rough-in supply, drain and vent to WSSC code, coordinate around your other trades, and stick around through finish so fixtures land clean and the inspection passes the first time.",
+      "image": "/images/service-remodel.jpg",
+      "image_alt": "Plumbing rough-in for a bathroom remodel",
+      "section_heading": "Behind-the-wall, done by the book.",
+      "features": [
+        { "title": "Kitchen & bath remodels", "body": "Relocate sinks, tubs, showers and toilets — laid out for the design you actually want." },
+        { "title": "Additions & ADUs", "body": "New supply, drain and vent runs for additions, basements and accessory units." },
+        { "title": "Permitted to WSSC code", "body": "Permit pulled, rough-in and final inspections handled — no scramble at the finish line." },
+        { "title": "Trade coordination", "body": "We schedule around your GC, framer and tile crew so the job keeps moving." }
+      ],
+      "signs_heading": "Two visits, planned around you.",
+      "signs": [
+        { "title": "1 · Rough-in", "body": "Supply, drain and vent run and pressure-tested before walls close, then inspected." },
+        { "title": "2 · Finish & set", "body": "We return after tile and paint to set fixtures, connect, and test everything." },
+        { "title": "Clear scope up front", "body": "You get a written scope and price so the remodel budget holds." }
+      ],
+      "cta_heading": "Planning a remodel?",
+      "cta_body": "Share your plans or even a rough sketch and timeline. We'll talk through the layout and put a rough-in price in writing — no pressure."
+    }
+  ],
+
+  "process": {
+    "eyebrow": "How it works",
+    "heading": "No surprises. Just three steps.",
+    "steps": [
+      { "n": "STEP 01", "title": "Tell us what's wrong", "body": "Send the quote form or call. We'll ask a few questions and book a visit — usually within a day or two." },
+      { "n": "STEP 02", "title": "Flat price, in writing", "body": "We diagnose on site and quote the whole job before any work starts. You approve, then we begin." },
+      { "n": "STEP 03", "title": "Fixed & cleaned up", "body": "We finish, test it twice, haul the old parts, and back the work with a one-year warranty." }
+    ],
+    "stats": [
+      { "num": "18", "unit": "yrs", "label": "Serving Montgomery County" },
+      { "num": "12k", "unit": "+", "label": "Jobs completed" },
+      { "num": "4.9", "unit": "★", "label": "Across 312 reviews" },
+      { "num": "$0", "unit": "", "label": "For the estimate" }
+    ]
+  },
+
+  "reviews_section": {
+    "eyebrow": "From the neighborhood",
+    "heading_line1": "People don't usually rave",
+    "heading_line2": "about their plumber.",
+    "rating": "4.9",
+    "rating_source": "312 Google reviews"
+  },
+
+  "reviews": [
+    {
+      "job": "Water heater · Rockville (King Farm)",
+      "initials": "DR",
+      "color": "#2C7A8C",
+      "name": "Dana R.",
+      "location": "Homeowner · Rockville",
+      "quote": "Our heater quit on a Tuesday. Mainline came out the next morning, gave me the price before touching anything, and had hot water back by lunch. Clean, polite, no upsell. Exactly what you want."
+    },
+    {
+      "job": "Repipe · Bethesda",
+      "initials": "MT",
+      "color": "#C06B3E",
+      "name": "Marcus T.",
+      "location": "Homeowner · Bethesda",
+      "quote": "Old galvanized pipes, brown water, the works. They repiped the whole house in PEX, pulled the WSSC permit, and patched the drywall so well you'd never know. Worth every dollar."
+    },
+    {
+      "job": "Sewer line · Gaithersburg",
+      "initials": "PL",
+      "color": "#1D3140",
+      "name": "Priya L.",
+      "location": "Homeowner · Gaithersburg",
+      "quote": "They ran a camera first instead of guessing, showed me the root intrusion on screen, and did a trenchless repair. No torn-up lawn, honest crew. I've already passed their number to two neighbors."
+    }
+  ],
+
+  "gallery_section": {
+    "eyebrow": "Recent work",
+    "heading": "Tidy copper, clean joints, no mess left behind.",
+    "images": [
+      { "image": "/images/gallery-1.jpg", "alt": "Freshly soldered copper manifold in a utility room", "size": "tall" },
+      { "image": "/images/gallery-2.jpg", "alt": "Newly installed water heater with clean gas and water connections", "size": "wide" },
+      { "image": "/images/gallery-3.jpg", "alt": "Modern kitchen faucet freshly installed", "size": "" },
+      { "image": "/images/gallery-4.jpg", "alt": "Bathroom remodel plumbing rough-in", "size": "" },
+      { "image": "/images/gallery-5.jpg", "alt": "Plumber finishing a clean under-sink repair", "size": "wide" }
+    ]
+  },
+
+  "quote_section": {
+    "eyebrow": "Get a quote",
+    "heading": "Tell us what's going on.",
+    "lede": "Fill this out and a real Mainline plumber — not a call center — gets back to you, usually the same business day.",
+    "steps": [
+      { "title": "You send the details.", "body": "The more you tell us, the tighter the estimate." },
+      { "title": "We reply with a price range.", "body": "And book a visit at a time that works for you." },
+      { "title": "Flat quote on site.", "body": "Approved before any work begins. The estimate is free." }
+    ],
+    "call_label": "Prefer to talk it through?"
+  },
+
+  "area_section": {
+    "eyebrow": "Service area",
+    "heading": "Rockville and all around it.",
+    "blurb": "Based in Rockville, we cover most of Montgomery County. Not sure if you're in range? Send the form and we'll tell you straight.",
+    "towns": ["Rockville", "Bethesda", "North Bethesda", "Potomac", "Gaithersburg", "Kensington", "Silver Spring", "Derwood", "Olney", "+ nearby"],
+    "image": "/images/service-area.jpg",
+    "image_alt": "Map showing the Montgomery County, Maryland service area"
+  }
+}

@@ -1,0 +1,38 @@
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="/" style="color:#fff">
+          <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="30" height="30" rx="4" fill="#1D3140"/>
+            <path d="M9 22c0-5 4-9 9-9m-9 9V10m0 12h12" stroke="#C06B3E" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="22" cy="13" r="3" stroke="#4FA6B8" stroke-width="2.2"/>
+          </svg>
+          <span>{{ site.company.name }}<small style="color:rgba(241,237,230,.5)">{{ site.company.tagline }}</small></span>
+        </a>
+        <p style="margin-top:18px;max-width:34ch;font-size:15px">{{ site.company.footer_blurb }}</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        {% for s in site.services %}<a href="/services/{{ s.slug }}/">{{ s.title }}</a>
+        {% endfor %}
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <a href="tel:{{ site.company.phone_link }}">{{ site.company.phone_display }}</a>
+        <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
+        <div class="li">{{ site.company.hours_weekday }}</div>
+        <div class="li">{{ site.company.hours_weekend }}</div>
+        <div class="li" style="color:var(--copper)">{{ site.company.license }}</div>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© 2026 {{ site.company.name }} — Rockville, MD</span>
+      <span>Licensed · Bonded · Insured · WSSC-approved</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in');});return;}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12});els.forEach(function(e){io.observe(e);});})();
+</script>

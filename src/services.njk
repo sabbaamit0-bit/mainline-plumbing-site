@@ -1,0 +1,69 @@
+---
+pagination:
+  data: site.services
+  size: 1
+  alias: s
+permalink: "/services/{{ s.slug }}/"
+eleventyComputed:
+  title: "{{ s.title | safe }} — Mainline Plumbing Co., Rockville MD"
+  description: "{{ s.title | safe }} in Rockville and Montgomery County, MD. {{ s.card_blurb | safe }}"
+---
+{% import "icons.njk" as icons %}
+<!DOCTYPE html>
+<html lang="en">
+{% include "head.njk" %}
+<body>
+{% include "topbar.njk" %}
+
+<main>
+<div class="wrap breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/#services">Services</a> &nbsp;/&nbsp; {{ s.title }}</div>
+
+<section class="svc-hero wrap">
+  <div class="svc-hero__grid">
+    <div class="reveal">
+      <span class="eyebrow">Service</span>
+      <h1>{{ s.title }}</h1>
+      <p class="lede">{{ s.page_lede }}</p>
+      <div class="svc-hero__cta">
+        <a class="btn btn--lg" href="/#quote">Request a free quote</a>
+        <a class="btn btn--ghost btn--lg" href="tel:{{ site.company.phone_link }}">Call {{ site.company.phone_display }}</a>
+      </div>
+    </div>
+    <div class="frame reveal" data-label="Service photo">
+      <img src="{{ s.image }}" alt="{{ s.image_alt }}" loading="eager" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section__head reveal"><span class="eyebrow">What's included</span><h2 style="font-size:clamp(26px,3.6vw,40px)">{{ s.section_heading }}</h2></div>
+    <div class="feature-list reveal">
+      {% for f in s.features %}
+      <div class="feature"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 13l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>{{ f.title }}</h3><p>{{ f.body }}</p></div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section__head reveal"><span class="eyebrow">Good to know</span><h2 style="font-size:clamp(24px,3.2vw,34px)">{{ s.signs_heading }}</h2></div>
+    <div class="signs reveal">
+      {% for sign in s.signs %}
+      <div class="sign"><b>{{ sign.title }}</b>{{ sign.body }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0"><div class="wrap"><div class="cta-band reveal">
+  <h2>{{ s.cta_heading }}</h2>
+  <p>{{ s.cta_body }}</p>
+  <a class="btn btn--lg" href="/#quote">Request a free quote</a>
+</div></div></section>
+</main>
+
+{% include "footer.njk" %}
+</body>
+</html>

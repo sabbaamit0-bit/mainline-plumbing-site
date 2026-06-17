@@ -1,0 +1,319 @@
+---
+permalink: /
+title: "Mainline Plumbing Co. — Licensed plumbers in Rockville, MD"
+description: "Licensed, insured plumbers serving Rockville and Montgomery County, MD. Leaks, water heaters, drains and repipes — upfront pricing, clean work. Request a free quote."
+---
+{% import "icons.njk" as icons %}
+<!DOCTYPE html>
+<html lang="en">
+{% include "head.njk" %}
+<body>
+{% include "topbar.njk" %}
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero wrap">
+  <div class="hero__grid">
+    <div class="hero__copy reveal">
+      <span class="eyebrow">{{ site.hero.eyebrow }}</span>
+      <h1>{{ site.hero.heading_before }}<br><em>{{ site.hero.heading_emphasis }}</em> {{ site.hero.heading_after }}</h1>
+      <p class="lede">{{ site.hero.lede }}</p>
+      <div class="hero__cta">
+        <a class="btn btn--lg" href="#quote">Request a free quote</a>
+        <a class="btn btn--ghost btn--lg" href="tel:{{ site.company.phone_link }}">Call {{ site.company.phone_display }}</a>
+      </div>
+      <ul class="trust">
+        {% for p in site.hero.trust_points %}
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 13l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> {{ p }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="hero__media reveal">
+      <div class="frame" data-label="Your photo: plumber at work">
+        <img src="{{ site.hero.image }}" alt="{{ site.hero.image_alt }}" loading="eager" onerror="this.style.display='none'" />
+      </div>
+      <div class="gauge">
+        <div class="gauge__top">{{ site.hero.gauge_top }}</div>
+        <svg width="138" height="80" viewBox="0 0 138 80" aria-hidden="true">
+          <path d="M14 74 A55 55 0 0 1 124 74" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="9" stroke-linecap="round"/>
+          <path d="M14 74 A55 55 0 0 1 104 33" fill="none" stroke="#C06B3E" stroke-width="9" stroke-linecap="round"/>
+          <line x1="69" y1="74" x2="101" y2="36" stroke="#4FA6B8" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="69" cy="74" r="5" fill="#4FA6B8"/>
+        </svg>
+        <div class="gauge__read">{{ site.hero.gauge_read }}<span> {{ site.hero.gauge_unit }}</span></div>
+        <div class="gauge__sub">{{ site.hero.gauge_sub }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow">{{ site.services_section.eyebrow }}</span>
+      <h2>{{ site.services_section.heading }}</h2>
+    </div>
+    <div class="svc-grid reveal">
+      {% for s in site.services %}
+      <a class="svc" href="/services/{{ s.slug }}/">
+        {{ icons.svc(s.icon) }}
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.card_blurb }}</p>
+        <span class="more">View service →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section--ink" id="process">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow" style="--copper-d:#E89B6E;color:#E89B6E">{{ site.process.eyebrow }}</span>
+      <h2>{{ site.process.heading }}</h2>
+    </div>
+    <div class="steps reveal">
+      {% for st in site.process.steps %}
+      <div class="step"><div class="n">{{ st.n }}</div><h3>{{ st.title }}</h3><p>{{ st.body }}</p></div>
+      {% endfor %}
+    </div>
+    <div class="statline reveal">
+      {% for stat in site.process.stats %}
+      <div class="stat"><div class="num">{{ stat.num }}<em>{{ stat.unit }}</em></div><div class="lbl">{{ stat.label }}</div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="rev-top">
+      <div class="section__head reveal" style="margin-bottom:0">
+        <span class="eyebrow">{{ site.reviews_section.eyebrow }}</span>
+        <h2>{{ site.reviews_section.heading_line1 }}<br>{{ site.reviews_section.heading_line2 }}</h2>
+      </div>
+      <div class="rating-badge reveal" aria-label="{{ site.reviews_section.rating }} out of 5 stars">
+        <div>
+          {{ icons.stars(18) }}
+          <div class="src">{{ site.reviews_section.rating_source }}</div>
+        </div>
+        <div class="big">{{ site.reviews_section.rating }}</div>
+      </div>
+    </div>
+    <div class="rev-grid reveal">
+      {% for r in site.reviews %}
+      <figure class="review">
+        <span class="job">{{ r.job }}</span>
+        {{ icons.stars(16) }}
+        <p>{{ r.quote }}</p>
+        <figcaption class="who"><span class="av" style="background:{{ r.color }}">{{ r.initials }}</span><span><b>{{ r.name }}</b><small>{{ r.location }}</small></span></figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow">{{ site.gallery_section.eyebrow }}</span>
+      <h2>{{ site.gallery_section.heading }}</h2>
+    </div>
+    <div class="gallery reveal">
+      {% for g in site.gallery_section.images %}
+      <div class="frame{% if g.size == 'tall' %} g-tall{% elif g.size == 'wide' %} g-wide{% endif %}" data-label="Project photo">
+        <img src="{{ g.image }}" alt="{{ g.alt }}" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section class="section quote" id="quote">
+  <div class="wrap">
+    <div class="quote__grid">
+      <div class="reveal">
+        <span class="eyebrow" style="--copper-d:#E89B6E;color:#E89B6E">{{ site.quote_section.eyebrow }}</span>
+        <h2>{{ site.quote_section.heading }}</h2>
+        <p class="lede">{{ site.quote_section.lede }}</p>
+        <ul class="qwhat">
+          {% for qs in site.quote_section.steps %}
+          <li><span class="c">0{{ loop.index }}</span><span><b>{{ qs.title }}</b><span>{{ qs.body }}</span></span></li>
+          {% endfor %}
+        </ul>
+        <div class="qcall">
+          <small>{{ site.quote_section.call_label }}</small>
+          <a href="tel:{{ site.company.phone_link }}">{{ site.company.phone_display }}</a>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <form class="form-card" id="quoteForm" novalidate>
+          <div class="form-fields" id="formFields">
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+            <div class="row2">
+              <div class="field" data-required>
+                <label for="name">Your name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Jamie Rivera" />
+                <div class="err">Please add your name.</div>
+              </div>
+              <div class="field" data-required>
+                <label for="phone">Phone <span class="req">*</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(301) 555-0148" />
+                <div class="err">A number we can reach you at.</div>
+              </div>
+            </div>
+            <div class="row2">
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com" />
+                <div class="err">That email looks off.</div>
+              </div>
+              <div class="field">
+                <label for="zip">Service address or ZIP</label>
+                <input type="text" id="zip" name="zip" autocomplete="postal-code" placeholder="Rockville, 20850" />
+              </div>
+            </div>
+            <div class="field" data-required>
+              <label for="service">What do you need? <span class="req">*</span></label>
+              <select id="service" name="service">
+                <option value="" disabled selected>Choose a service…</option>
+                {% for s in site.services %}<option>{{ s.title }}</option>
+                {% endfor %}
+                <option>Something else</option>
+              </select>
+              <div class="err">Pick the closest match.</div>
+            </div>
+            <div class="field" data-required>
+              <label>How soon? <span class="req">*</span></label>
+              <div class="seg" role="radiogroup" aria-label="How soon do you need help">
+                <input type="radio" id="u-asap" name="urgency" value="As soon as possible">
+                <label for="u-asap">ASAP<small>This week</small></label>
+                <input type="radio" id="u-soon" name="urgency" value="In the next few weeks">
+                <label for="u-soon">Soon<small>Few weeks</small></label>
+                <input type="radio" id="u-plan" name="urgency" value="Just planning / getting prices">
+                <label for="u-plan">Planning<small>Getting prices</small></label>
+              </div>
+              <div class="err">Let us know the timing.</div>
+            </div>
+            <div class="field">
+              <label for="details">Tell us what's going on</label>
+              <textarea id="details" name="details" placeholder="e.g. Water heater is leaking from the bottom, ~10 years old, in the garage."></textarea>
+            </div>
+            <div class="field">
+              <label>Best way to reach you</label>
+              <div class="pref">
+                <label><input type="radio" name="pref" value="Call" checked> Call</label>
+                <label><input type="radio" name="pref" value="Text"> Text</label>
+                <label><input type="radio" name="pref" value="Email"> Email</label>
+              </div>
+            </div>
+            <label class="consent"><input type="checkbox" id="consent" name="consent" value="Yes"> It's okay to contact me about this request. We never share your info.</label>
+            <button class="btn btn--lg" type="submit" id="submitBtn" style="width:100%">Request my quote</button>
+            <div class="form-error" id="formError"></div>
+            <p class="form-note">Free estimate · No obligation · Typically answered the same business day</p>
+          </div>
+          <div class="success" id="success" role="status" aria-live="polite">
+            <div class="tick"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 13l5 5L20 6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3 id="successName">Thanks — we've got it.</h3>
+            <p>A {{ site.company.name }} plumber will reach out shortly, usually the same business day. Hours are {{ site.company.hours_weekday }} and {{ site.company.hours_weekend }}.</p>
+            <div class="recap" id="recap"></div>
+            <button class="btn btn--ghost" type="button" id="resetForm">Send another request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="section" style="padding-top:0">
+  <div class="wrap area">
+    <div class="reveal">
+      <span class="eyebrow">{{ site.area_section.eyebrow }}</span>
+      <h2 style="font-size:clamp(28px,4vw,42px);margin-top:14px">{{ site.area_section.heading }}</h2>
+      <p style="color:var(--muted);margin-top:16px;max-width:42ch">{{ site.area_section.blurb }}</p>
+      <div class="area__towns">
+        {% for t in site.area_section.towns %}<span>{{ t }}</span>{% endfor %}
+      </div>
+    </div>
+    <div class="frame reveal" data-label="Map: service area">
+      <img src="{{ site.area_section.image }}" alt="{{ site.area_section.image_alt }}" loading="lazy" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+</main>
+
+{% include "footer.njk" %}
+
+<script>
+/* Quote form → Google Sheet */
+(function(){
+  var SHEETS_URL = "{{ site.company.sheets_url }}";
+  var form = document.getElementById('quoteForm');
+  var fields = document.getElementById('formFields');
+  var success = document.getElementById('success');
+  var recap = document.getElementById('recap');
+  var successName = document.getElementById('successName');
+  var submitBtn = document.getElementById('submitBtn');
+  var formError = document.getElementById('formError');
+
+  function escapeHtml(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function showErr(msg){ formError.textContent = msg; formError.classList.add('show'); }
+  function clearErr(){ formError.classList.remove('show'); }
+
+  function validate(){
+    var ok = true, firstBad = null;
+    form.querySelectorAll('.field[data-required]').forEach(function(field){
+      var valid = true;
+      if(field.querySelector('.seg')){ valid = !!form.querySelector('input[name="urgency"]:checked'); }
+      else { var ctrl = field.querySelector('input, select'); if(ctrl && !String(ctrl.value).trim()) valid = false; if(!valid && !firstBad) firstBad = ctrl; }
+      if(!valid){ ok=false; field.classList.add('invalid'); } else field.classList.remove('invalid');
+    });
+    var email = document.getElementById('email');
+    if(email.value && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value)){ ok=false; email.closest('.field').classList.add('invalid'); if(!firstBad) firstBad=email; }
+    return { ok: ok, firstBad: firstBad };
+  }
+
+  function showSuccess(){
+    var name = document.getElementById('name').value.trim();
+    var svc  = document.getElementById('service').value;
+    var urg  = (form.querySelector('input[name="urgency"]:checked')||{}).value || '';
+    var pref = (form.querySelector('input[name="pref"]:checked')||{}).value || '';
+    var phone= document.getElementById('phone').value.trim();
+    successName.textContent = 'Thanks, ' + (name.split(' ')[0] || 'there') + " — we've got it.";
+    recap.innerHTML = '<div><b>Service:</b> ' + escapeHtml(svc) + '</div><div><b>Timing:</b> ' + escapeHtml(urg) + "</div><div><b>We'll reach you:</b> by " + escapeHtml(pref) + ' at ' + escapeHtml(phone) + '</div>';
+    fields.style.display='none'; success.classList.add('show'); success.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault(); clearErr();
+    var v = validate();
+    if(!v.ok){ if(v.firstBad && v.firstBad.focus) v.firstBad.focus(); return; }
+    if(SHEETS_URL.indexOf("YOUR_") === 0 || !SHEETS_URL){ showSuccess(); return; }
+    submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
+    var body = new URLSearchParams();
+    new FormData(form).forEach(function(v, k){ body.append(k, v); });
+    body.append('page', location.pathname || 'home');
+    fetch(SHEETS_URL, { method:'POST', mode:'no-cors', body: body })
+      .then(function(){ showSuccess(); })
+      .catch(function(){ showErr('Network hiccup — please try again, or call {{ site.company.phone_display }}.'); })
+      .finally(function(){ submitBtn.disabled = false; submitBtn.textContent = 'Request my quote'; });
+  });
+
+  document.getElementById('resetForm').addEventListener('click', function(){
+    form.reset(); form.querySelectorAll('.invalid').forEach(function(f){ f.classList.remove('invalid'); });
+    clearErr(); success.classList.remove('show'); fields.style.display='block'; document.getElementById('name').focus();
+  });
+  form.addEventListener('input', function(e){ var field = e.target.closest('.field'); if(field) field.classList.remove('invalid'); });
+})();
+</script>
+</body>
+</html>

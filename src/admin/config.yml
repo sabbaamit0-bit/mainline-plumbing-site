@@ -1,0 +1,205 @@
+# ============================================================
+#  Decap CMS — admin panel configuration
+#  Edits write back to src/_data/site.json, which Eleventy
+#  rebuilds into the live site on every save.
+# ============================================================
+
+backend:
+  name: github
+  repo: sabbaamit0-bit/mainline-plumbing-site
+  branch: main
+
+# Where uploaded images are stored / referenced
+media_folder: "src/images"
+public_folder: "/images"
+
+# Friendlier editor defaults
+publish_mode: simple
+site_url: https://example.netlify.app   # <-- I'll set this to your live URL
+
+collections:
+  - name: "site"
+    label: "Website content"
+    description: "Edit every part of the site here. Save to publish."
+    delete: false
+    files:
+      # ---------------- Business details ----------------
+      - name: "company"
+        label: "① Business details (name, phone, email, hours)"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Business name", name: "name", widget: "string" }
+          - { label: "Tagline (under the logo)", name: "tagline", widget: "string" }
+          - { label: "Phone — shown on page", name: "phone_display", widget: "string", hint: "e.g. (301) 555-0148" }
+          - { label: "Phone — for tap-to-call", name: "phone_link", widget: "string", hint: "digits only with country code, e.g. +13015550148" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "License line", name: "license", widget: "string" }
+          - { label: "Weekday hours", name: "hours_weekday", widget: "string" }
+          - { label: "Weekend hours", name: "hours_weekend", widget: "string" }
+          - { label: "Footer blurb", name: "footer_blurb", widget: "text" }
+          - { label: "Quote form endpoint (advanced — leave alone)", name: "sheets_url", widget: "string", required: false }
+
+      # ---------------- Hero (top of page) ----------------
+      - name: "hero"
+        label: "② Hero (top banner)"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Eyebrow (small label)", name: "eyebrow", widget: "string" }
+          - { label: "Headline — first part", name: "heading_before", widget: "string" }
+          - { label: "Headline — highlighted word", name: "heading_emphasis", widget: "string" }
+          - { label: "Headline — last part", name: "heading_after", widget: "string" }
+          - { label: "Intro paragraph", name: "lede", widget: "text" }
+          - { label: "Hero photo", name: "image", widget: "image", required: false }
+          - { label: "Hero photo description (for accessibility)", name: "image_alt", widget: "string" }
+          - { label: "Badge — top label", name: "gauge_top", widget: "string" }
+          - { label: "Badge — big text", name: "gauge_read", widget: "string" }
+          - { label: "Badge — unit", name: "gauge_unit", widget: "string" }
+          - { label: "Badge — small text", name: "gauge_sub", widget: "string" }
+          - label: "Trust points (the three checkmarks)"
+            name: "trust_points"
+            widget: "list"
+            field: { label: "Point", name: "point", widget: "string" }
+
+      # ---------------- Services ----------------
+      - name: "services"
+        label: "③ Services (cards + their pages)"
+        file: "src/_data/site.json"
+        fields:
+          - label: "Services section heading"
+            name: "services_section"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+          - label: "Service list"
+            name: "services"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "URL slug (no spaces, e.g. water-heaters)", name: "slug", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "select", options: ["leak", "heater", "drain", "repipe", "faucet", "remodel"] }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Card blurb (shown on homepage)", name: "card_blurb", widget: "text" }
+              - { label: "Page intro paragraph", name: "page_lede", widget: "text" }
+              - { label: "Page photo", name: "image", widget: "image", required: false }
+              - { label: "Photo description", name: "image_alt", widget: "string" }
+              - { label: "“What's included” heading", name: "section_heading", widget: "string" }
+              - label: "What's included (4 items)"
+                name: "features"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+              - { label: "“Signs” heading", name: "signs_heading", widget: "string" }
+              - label: "Signs / steps (3 items)"
+                name: "signs"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+              - { label: "Bottom call-to-action heading", name: "cta_heading", widget: "string" }
+              - { label: "Bottom call-to-action text", name: "cta_body", widget: "text" }
+
+      # ---------------- How it works ----------------
+      - name: "process"
+        label: "④ How it works (steps + stats)"
+        file: "src/_data/site.json"
+        fields:
+          - label: "Process"
+            name: "process"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Step label", name: "n", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Number", name: "num", widget: "string" }
+                  - { label: "Unit", name: "unit", widget: "string", required: false }
+                  - { label: "Label", name: "label", widget: "string" }
+
+      # ---------------- Reviews ----------------
+      - name: "reviews"
+        label: "⑤ Reviews"
+        file: "src/_data/site.json"
+        fields:
+          - label: "Reviews section"
+            name: "reviews_section"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading line 1", name: "heading_line1", widget: "string" }
+              - { label: "Heading line 2", name: "heading_line2", widget: "string" }
+              - { label: "Rating number", name: "rating", widget: "string" }
+              - { label: "Rating source", name: "rating_source", widget: "string" }
+          - label: "Review cards"
+            name: "reviews"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.job}}"
+            fields:
+              - { label: "Job / location label", name: "job", widget: "string" }
+              - { label: "Initials (for the circle)", name: "initials", widget: "string" }
+              - { label: "Circle color", name: "color", widget: "color" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Location line", name: "location", widget: "string" }
+              - { label: "Review text", name: "quote", widget: "text" }
+
+      # ---------------- Gallery ----------------
+      - name: "gallery"
+        label: "⑥ Photo gallery"
+        file: "src/_data/site.json"
+        fields:
+          - label: "Gallery section"
+            name: "gallery_section"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Photos"
+                name: "images"
+                widget: "list"
+                fields:
+                  - { label: "Photo", name: "image", widget: "image" }
+                  - { label: "Description", name: "alt", widget: "string" }
+                  - { label: "Size", name: "size", widget: "select", options: ["", "wide", "tall"], required: false }
+
+      # ---------------- Service area + quote intro ----------------
+      - name: "area"
+        label: "⑦ Service area & quote intro"
+        file: "src/_data/site.json"
+        fields:
+          - label: "Quote section intro"
+            name: "quote_section"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro paragraph", name: "lede", widget: "text" }
+              - label: "Three steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "string" }
+              - { label: "Call label", name: "call_label", widget: "string" }
+          - label: "Service area"
+            name: "area_section"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Blurb", name: "blurb", widget: "text" }
+              - label: "Towns"
+                name: "towns"
+                widget: "list"
+                field: { label: "Town", name: "town", widget: "string" }
+              - { label: "Map / area photo", name: "image", widget: "image", required: false }
+              - { label: "Photo description", name: "image_alt", widget: "string" }
