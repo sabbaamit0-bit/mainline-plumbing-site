@@ -8,6 +8,8 @@ backend:
   name: github
   repo: sabbaamit0-bit/mainline-plumbing-site
   branch: main
+  base_url: https://preeminent-starlight-e5502f.netlify.app
+  auth_endpoint: .netlify/functions/auth
 
 # Where uploaded images are stored / referenced
 media_folder: "src/images"
@@ -15,7 +17,7 @@ public_folder: "/images"
 
 # Friendlier editor defaults
 publish_mode: simple
-site_url: https://example.netlify.app   # <-- I'll set this to your live URL
+site_url: https://preeminent-starlight-e5502f.netlify.app
 
 collections:
   - name: "site"
